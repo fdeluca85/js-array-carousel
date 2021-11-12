@@ -18,10 +18,10 @@ for (let i = 0; i < items.length; i++){
     <div class="foto">
         <img  src="${items[i]}" alt="">
     </div>
-    `
-    
-}
-fotografie += `<div class="txt-container"></div>`;
+    `      
+    }
+    fotografie += `<div class="txt-container"></div>`;
+    fotografie += `<div class="titolo-container"></div>`;
 console.log(fotografie);
 
 const box  = document.querySelector(".box");
@@ -31,28 +31,32 @@ const foto = document.querySelector ('.foto');
 foto.className = 'foto active';
 
 
-// // titolo immagine grande
-// const title = [
-//     'Svezia',
-//     'Svizzera',
-//     'Gran Bretagna',
-//     'Germania',
-//     'Paradise'
-// ];console.log(title);
+// titolo immagine grande
+const title = [
+    'Svezia',
+    'Svizzera',
+    'Gran Bretagna',
+    'Germania',
+    'Paradise'
+];console.log(title);
 
+let titoli = '';
 
+for (let i = 0; i < title.length; i++){
+    titoli +=`
+    <div class="titolo">
+        ${title[i]}
+    </div>`
+}
+console.log(titoli);
 
+const titoloContainer  = document.querySelector(".titolo-container");
+titoloContainer.innerHTML = titoli
+console.log(titoloContainer);
 
-
-
-
-
-
-
-
-
-
-
+const titolo = document.querySelector ('.titolo');
+titolo.className = 'titolo titolo-visibile';
+console.log(titolo);
 
 
 // testo immagine grande
