@@ -29,6 +29,7 @@ body{
 
 /* contenitore dell'immagine principale e della colonna thumbnail */
 .box{
+    position: relative;
     height: 500px;
     /* width: 1000px; */
     display: flex;
@@ -110,23 +111,31 @@ body{
 
 /* testo */
 
-.titolo{
-    position: absolute;
-    bottom: 70px;
-    width: calc(100% - 220px);
-    margin: 20px;
-    display: flex;
-    text-align: right;
-
-}
 .txt-container{
-    display: flex;
+    position: absolute;
+    right: 10px;
+    bottom: 50px;
+    width: 80%;
+    text-align: end;
 }
 .txt{
+    display: none;
+}
+.txt-visibile{
+    display: block;
+}
+
+/* titolo */
+.titolo-container{
     position: absolute;
-    bottom: 40px;
-    width: calc(100% - 220px);
-    margin: 20px;
-    display: flex;
-    text-align: right;
+    right: 10px;
+    bottom: 100px;
+    width: 80%;
+    text-align: end;
+}
+.titolo{
+    display: none;
+}
+.titolo-visibile{
+    display: block;
 }

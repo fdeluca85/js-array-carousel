@@ -76,7 +76,8 @@ console.log(informazioni);
 
 const txtContainer  = document.querySelector(".txt-container");
 txtContainer.innerHTML = informazioni
-console.log(txt);
+console.log(txtContainer);
 
 const txt = document.querySelector ('.txt');
-txt.className = 'txt active';
+txt.className = 'txt txt-visibile';
+console.log(txt);
