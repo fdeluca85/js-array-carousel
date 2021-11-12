@@ -8,7 +8,8 @@ const items = [
     'img/03.jpg',
     'img/04.jpg',
     'img/05.jpg'
-]; console.log(items);
+]; 
+// console.log(items);
 
 
 let fotografie = '';
@@ -22,14 +23,20 @@ for (let i = 0; i < items.length; i++){
     }
     fotografie += `<div class="txt-container"></div>`;
     fotografie += `<div class="titolo-container"></div>`;
-console.log(fotografie);
+// console.log(fotografie);
 
 const box  = document.querySelector(".box");
 box.innerHTML = fotografie
 
-const foto = document.querySelector ('.foto');
-foto.className = 'foto active';
+// let foto = document.querySelector ('.foto');
+// foto.className = 'foto';
+const fotos = document.getElementsByClassName('foto');
+console.log(fotos);
+let fotoAttiva = 0;
 
+
+console.log(fotos[fotoAttiva]);
+fotos[fotoAttiva].classList.add('active');
 
 // titolo immagine grande
 const title = [
@@ -38,25 +45,33 @@ const title = [
     'Gran Bretagna',
     'Germania',
     'Paradise'
-];console.log(title);
+];
+// console.log(title);
 
-let titoli = '';
+let titles = '';
 
 for (let i = 0; i < title.length; i++){
-    titoli +=`
+    titles +=`
     <div class="titolo">
         ${title[i]}
     </div>`
 }
-console.log(titoli);
+// console.log(titles);
 
 const titoloContainer  = document.querySelector(".titolo-container");
-titoloContainer.innerHTML = titoli
+titoloContainer.innerHTML = titles
 console.log(titoloContainer);
 
-const titolo = document.querySelector ('.titolo');
-titolo.className = 'titolo titolo-visibile';
-console.log(titolo);
+// let titolo = document.querySelector ('.titolo');
+// titolo.className = 'titolo titolo-visibile';
+// console.log(titolo);
+
+const titoli = document.getElementsByClassName('titolo');
+console.log(titoli);
+let titoloAttivo = 0;
+
+console.log(titoli[titoloAttivo]);
+titoli[titoloAttivo].classList.add('titolo-visibile');
 
 
 // testo immagine grande
@@ -66,7 +81,8 @@ const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-]; console.log(text);
+]; 
+// console.log(text);
 
 let informazioni = '';
 
@@ -76,12 +92,26 @@ for (let i = 0; i < text.length; i++){
         ${text[i]}
     </div>`
 }
-console.log(informazioni);
+// console.log(informazioni);
 
 const txtContainer  = document.querySelector(".txt-container");
 txtContainer.innerHTML = informazioni
 console.log(txtContainer);
 
-const txt = document.querySelector ('.txt');
-txt.className = 'txt txt-visibile';
-console.log(txt);
+// let txt = document.querySelector ('.txt');
+// txt.className = 'txt txt-visibile';
+// console.log(txt);
+const didascalie = document.getElementsByClassName('txt');
+console.log(didascalie);
+let didascaliaAttiva = 0;
+console.log(didascalie[didascaliaAttiva]);
+
+didascalie[didascaliaAttiva].classList.add('txt-visibile');
+
+// pulsanti
+// const up = document.querySelector('.up')
+// const down = document.querySelector('.down')
+
+// up.addEventListener('click', function(){
+    
+// });
