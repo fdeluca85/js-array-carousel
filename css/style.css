@@ -119,6 +119,9 @@ body{
     text-align: right;
 
 }
+.txt-container{
+    display: flex;
+}
 .txt{
     position: absolute;
     bottom: 40px;

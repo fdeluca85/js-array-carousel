@@ -17,8 +17,11 @@ for (let i = 0; i < items.length; i++){
     fotografie +=`
     <div class="foto">
         <img  src="${items[i]}" alt="">
-    </div>`
+    </div>
+    `
+    
 }
+fotografie += `<div class="txt-container"></div>`;
 console.log(fotografie);
 
 const box  = document.querySelector(".box");
@@ -71,9 +74,9 @@ for (let i = 0; i < text.length; i++){
 }
 console.log(informazioni);
 
-const txt  = document.querySelector(".txt");
-txt.innerHTML = informazioni
+const txtContainer  = document.querySelector(".txt-container");
+txtContainer.innerHTML = informazioni
 console.log(txt);
 
-const info = document.querySelector ('.txt');
-info.className = 'txt active';
+const txt = document.querySelector ('.txt');
+txt.className = 'txt active';
