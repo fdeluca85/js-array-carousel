@@ -117,7 +117,8 @@ didascalie[didascaliaAttiva].classList.add('txt-visibile');
 
     up.addEventListener('click', function(){
         
-        // rimuove la classe active
+       if (fotoAttiva < items.length -1){
+            // rimuove la classe active
         fotos[fotoAttiva].classList.remove('active');
         titoli[titoloAttivo].classList.remove('titolo-visibile');
         didascalie[didascaliaAttiva].classList.remove('txt-visibile');
@@ -131,14 +132,16 @@ didascalie[didascaliaAttiva].classList.add('txt-visibile');
         fotos[fotoAttiva].classList.add('active');
         titoli[titoloAttivo].classList.add('titolo-visibile');
         didascalie[didascaliaAttiva].classList.add('txt-visibile');
-
+       }
+       
     }); 
 
     
     // down
     
     down.addEventListener('click', function(){
-        // rimuove la classe active
+        if (fotoAttiva > 0){
+            // rimuove la classe active
         fotos[fotoAttiva].classList.remove('active');
         titoli[titoloAttivo].classList.remove('titolo-visibile');
         didascalie[didascaliaAttiva].classList.remove('txt-visibile');
@@ -153,4 +156,5 @@ didascalie[didascaliaAttiva].classList.add('txt-visibile');
         titoli[titoloAttivo].classList.add('titolo-visibile');
         didascalie[didascaliaAttiva].classList.add('txt-visibile');
 
+        } 
     }); 
