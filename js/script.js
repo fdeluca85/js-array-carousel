@@ -109,9 +109,48 @@ console.log(didascalie[didascaliaAttiva]);
 didascalie[didascaliaAttiva].classList.add('txt-visibile');
 
 // pulsanti
-// const up = document.querySelector('.up')
-// const down = document.querySelector('.down')
+    const up = document.querySelector('.up')
+    const down = document.querySelector('.down')
 
-// up.addEventListener('click', function(){
+
+    //up
+
+    up.addEventListener('click', function(){
+        
+        // rimuove la classe active
+        fotos[fotoAttiva].classList.remove('active');
+        titoli[titoloAttivo].classList.remove('titolo-visibile');
+        didascalie[didascaliaAttiva].classList.remove('txt-visibile');
+
+        // incrementa il contatore active
+        fotoAttiva++;
+        titoloAttivo++;
+        didascaliaAttiva++;
+
+        // classe active allélento successivo
+        fotos[fotoAttiva].classList.add('active');
+        titoli[titoloAttivo].classList.add('titolo-visibile');
+        didascalie[didascaliaAttiva].classList.add('txt-visibile');
+
+    }); 
+
     
-// });
+    // down
+    
+    down.addEventListener('click', function(){
+        // rimuove la classe active
+        fotos[fotoAttiva].classList.remove('active');
+        titoli[titoloAttivo].classList.remove('titolo-visibile');
+        didascalie[didascaliaAttiva].classList.remove('txt-visibile');
+
+        // incrementa il contatore active
+        fotoAttiva--;
+        titoloAttivo--;
+        didascaliaAttiva--;
+
+        // classe active elemento successivo
+        fotos[fotoAttiva].classList.add('active');
+        titoli[titoloAttivo].classList.add('titolo-visibile');
+        didascalie[didascaliaAttiva].classList.add('txt-visibile');
+
+    }); 
